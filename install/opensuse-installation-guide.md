@@ -12,8 +12,8 @@
    $ PUBKEY="/tmp/rpm-signkey.pub"
    $ curl -SsL -o "$PUBKEY" "https://raw.githubusercontent.com/kata-containers/tests/master/data/rpm-signkey.pub"
    $ sudo -E rpm --import "$PUBKEY"
-   $ zypper lr "$REPO_ALIAS" && sudo -E zypper -n removerepo "$REPO_ALIAS"
    $ sudo -E zypper addrepo --refresh "http://download.opensuse.org/repositories/home:/katacontainers:/releases:/${ARCH}:/${BRANCH}/${DISTRO_REPO}/" "$REPO_ALIAS"
+   $ zypper lr "$REPO_ALIAS" && sudo -E zypper -n removerepo "$REPO_ALIAS"
    $ sudo -E zypper -n install kata-runtime
    ```
 
